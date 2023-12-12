@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-image: url('./desktop-wallpaper-portfolio.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 2em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 1em;
+            opacity: 0;
+            animation: fadeInNav 1s forwards;
+        }
+
+        @keyframes fadeInNav {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 1.5em;
+            margin: 0 0.5em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4em 1em;
+            background-color: rgba(0, 123, 255, 0.5); /* Light overlay with 50% transparency */
+            color: #fff;
+            opacity: 0;
+            animation: fadeInOutHero 2s forwards;
+        }
+
+        @keyframes fadeInOutHero {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 3em;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2em;
+            margin: 1em;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: #4CAF50; /* Green */
+        }
+
+        .feature p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .contact-me {
+            text-align: center;
+            padding: 4em 1em;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .contact-me form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 0.7em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+
+        footer {
+            text-align: center;
+            padding: 2em;
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rohit Kshirsagar</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome My Landing Page</h1>
+        <p> Live Your Purpose !!!</p>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h2>HTML /  CSS</h2>
+            
+        </div>
+        <div class="feature">
+            <h2>PYTHON / C++</h2>
+            
+        </div>
+        <div class="feature">
+            <h2>DATA STRUCTURES AND ALGORITHMS</h2>
+            
+        </div>
+    </div>
+
+    <div class="contact-me">
+        <h2>Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2023 Your Landing Page. All rights reserved.
+    </footer>
+
+</body>
+</html>
+
